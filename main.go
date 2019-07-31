@@ -62,6 +62,7 @@ func main() {
 	}
 
 	if len(alert) > 0 {
+		fmt.Println(alert)
 		_ = common.PostJSON(os.Getenv("ALERT_URL"), M{"msgtype": "text", "text": M{"content": alert}}, nil)
 	}
 }
